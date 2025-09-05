@@ -1,15 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 
 export default function NavigationBar() {
   const [active, setActive] = useState("Begin");
   const menuItems = [
-    { label: "Begin", path: "#home" },
-    { label: "Portfolio", path: "#portfolio" },
-    { label: "What I Do", path: "#what-i-do" },
-    { label: "Who Am I", path: "#who-am-i" },
-    { label: "Let's Connect", path: "#lets-connect" },
+    { label: "Begin", path: "begin" },
+    { label: "Portfolio", path: "portfolio" },
+    { label: "What I Do", path: "what-i-do" },
+    { label: "Who Am I", path: "who-am-i" },
+    { label: "Let's Connect", path: "lets-connect" },
   ];
+
+  // Update active state based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = menuItems.map((item) => ({
+        id: item.path.substring(1), // Remove #
+        element: document.getElementById(item.path.substring(1)),
+      }));
+
+      const currentSection = sections.find((section) => {
+        if (section.element) {
+          const rect = section.element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        const activeItem = menuItems.find(
+          (item) => item.path === `#${currentSection.id}`
+        );
+        if (activeItem) {
+          setActive(activeItem.label);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleClick = (item) => {
+    setActive(item.label);
+
+    // Smooth scroll to section
+    const element = document.getElementById(item.path.substring(1));
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    // Update URL hash without page reload
+    window.history.pushState(null, null, item.path);
+  };
 
   return (
     <AppBar
@@ -31,11 +77,9 @@ export default function NavigationBar() {
                 transform: "scaleX(1)",
               },
             }}
-            onClick={() => setActive(item.label)}
+            onClick={() => handleClick(item)}
           >
             <Typography
-              component="a"
-              href={item.path}
               sx={{
                 fontWeight: 500,
                 fontSize: "18px",

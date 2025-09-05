@@ -13,7 +13,7 @@ export default function App() {
     <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <NavigationBar />
       <Box component="main" sx={{ flexGrow: 1, overflowY: "auto" }}>
-        <div id="home">
+        <div id="begin">
           <HeroSection />
         </div>
         <div id="what-i-do">
