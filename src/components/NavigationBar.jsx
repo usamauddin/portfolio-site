@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
-import { Link } from "react-router-dom";
 
 export default function NavigationBar() {
-  const [active, setActive] = useState("Let's Start");
+  const [active, setActive] = useState("Begin");
   const menuItems = [
-    { label: "Begin", path: "/" },
-    { label: "Portfolio", path: "/portfolio" },
-    { label: "What I Do", path: "/what-i-do" },
-    { label: "Who Am I", path: "/who-am-i" },
-    { label: "Let's Connect", path: "/lets-connect" },
+    { label: "Begin", path: "#home" },
+    { label: "Portfolio", path: "#portfolio" },
+    { label: "What I Do", path: "#what-i-do" },
+    { label: "Who Am I", path: "#who-am-i" },
+    { label: "Let's Connect", path: "#lets-connect" },
   ];
-
-  // console.log("active", active);
 
   return (
     <AppBar
@@ -37,8 +34,8 @@ export default function NavigationBar() {
             onClick={() => setActive(item.label)}
           >
             <Typography
-              component={Link}
-              to={item.path}
+              component="a"
+              href={item.path}
               sx={{
                 fontWeight: 500,
                 fontSize: "18px",
