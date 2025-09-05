@@ -114,7 +114,7 @@ export default function WhatIDo() {
           scrollbarWidth: "none",
           "&::-webkit-scrollbar": { display: "none" },
           backgroundColor: "#041C32",
-          flexWrap: "wrap",
+    
         }}
       >
         {images.map((item) => (
