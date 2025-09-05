@@ -88,7 +88,6 @@ export default function WhatIDo() {
           justifyContent: "center",
           backgroundColor: "#041C32",
           // marginTop: "80px",
-       
         }}
       >
         <Typography
@@ -115,7 +114,7 @@ export default function WhatIDo() {
           scrollbarWidth: "none",
           "&::-webkit-scrollbar": { display: "none" },
           backgroundColor: "#041C32",
-          
+          flexWrap: "wrap",
         }}
       >
         {images.map((item) => (
@@ -146,7 +145,7 @@ export default function WhatIDo() {
               style={{
                 width: "70px",
                 height: "70px",
-                objectFit: 'contain'
+                objectFit: "contain",
               }}
             />
             <Typography
