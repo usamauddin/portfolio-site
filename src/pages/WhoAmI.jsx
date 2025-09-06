@@ -5,35 +5,34 @@ export default function WhoAmI() {
     {
       title: "System Architecture",
       description:
-        "Designing scalable microservices architectures with proper separation of concerns and high availability patterns.",
+        "Architecting scalable microservices and monolithic systems with separation of concerns, reliability, maintainability, modularity, scalability, and high availability.",
       icon: "🏗️",
     },
     {
       title: "Database Design",
       description:
-        "Optimizing  and NoSQL databases for performance, implementing efficient queries and data modeling.",
+        "Architecting and optimising SQL and NoSQL databases with advanced indexing and scalable data models that ensure reliability, scalability, and efficient data storage and retrieval.",
       icon: "🗄️",
     },
     {
       title: "API Development",
       description:
-        "Building robust RESTful APIs and GraphQL endpoints with comprehensive documentation and testing.",
+        "Developing RESTful APIs and GraphQL endpoints for seamless front-end communication, leveraging callbacks and promises for efficient asynchronous operations.",
       icon: "🔌",
     },
     {
       title: "Payment Integration",
       description:
-        "Integrating secure and reliable payment gateways like Stripe, PayPal, and Moyasar with subscription and one-time payments.",
+        "Integrating secure payment gateways such as Stripe, PayPal to support subscription and one-time flows, while configuring webhooks for reliable real-time transaction processing.",
       icon: "💳",
     },
     {
       title: "DevOps & CI/CD",
       description:
-        "Implementing automated deployment pipelines, containerization, and infrastructure as code practices.",
+        "Implementing automated deployment pipelines, containerization, to ensure scalability, reliability, security, efficiency, and faster delivery.",
       icon: "⚙️",
     },
   ];
-  
 
   return (
     <Box
@@ -143,7 +142,7 @@ export default function WhoAmI() {
               <Card
                 key={item.title}
                 sx={{
-                  borderRadius: '8px',
+                  borderRadius: "8px",
                   p: 2,
                   boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
                   backgroundColor: "#082A43",
