@@ -1,3 +1,4 @@
+
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
@@ -31,12 +32,10 @@ export default function WhatIDo() {
       url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1754993983/Node.js_tqfsia.svg",
       label: "Node JS ",
     },
-
     {
       url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1755020302/kafka_d1reat.svg",
       label: "Kafka",
     },
-
     {
       url: "https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000",
       label: "Docker",
@@ -66,7 +65,6 @@ export default function WhatIDo() {
       label: "Digital Ocean",
     },
     {
-      // url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1755021353/githubactions_cvqe6e.svg",
       url: "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/03/CICD.png",
       label: "CI CD Pipeline",
     },
@@ -79,42 +77,50 @@ export default function WhatIDo() {
       label: "Postman",
     },
   ];
+
   return (
-    <>
-      <Box
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "#041C32",
-          // marginTop: "80px",
+    <Box
+      sx={{
+        maxWidth: "1200px",
+        backgroundColor: "#041C32",
+        // border: '1px solid white',
+        margin: 'auto',
+        // px: { xs: 2, sm: 3, md: 4 }
+      }}
+    >
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: { xs: "2rem", md: "3rem" },
+          fontWeight: "700",
+          color: "white",
+          fontFamily: "Raleway",
+          textAlign: "center",
+          py: { xs: 2, md: 3 }
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: { xs: "2rem", md: "3rem" },
-            fontWeight: "700",
-            color: "white",
-            // fontFamily: "nunito sans",
-            fontFamily: "Raleway",
-            textAlign: "center",
-          }}
-        >
-          What I Do
-        </Typography>
-      </Box>
+        What I Do
+      </Typography>
+
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "repeat(9, 80px)",
-          gap: "20px 55px",
+          gridTemplateColumns: {
+            xs: "repeat(2, 80px)",      // 2 columns on extra small screens
+            sm: "repeat(3, 80px)",      // 3 columns on small screens
+            md: "repeat(4, 80px)",      // 4 columns on medium screens
+            lg: "repeat(9, 80px)",      // 6 columns on large screens
+            xl: "repeat(9, 80px)"       // 9 columns on extra large screens
+          },
+          gap: "20px 50px",
           justifyContent: "center",
-          padding: "30px",
+          padding: { xs: "20px", sm: "25px", md: "30px" },
           scrollbarWidth: "none",
           "&::-webkit-scrollbar": { display: "none" },
           backgroundColor: "#041C32",
-    
+          // border: '1px solid white',
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
       >
         {images.map((item) => (
@@ -127,7 +133,9 @@ export default function WhatIDo() {
               alignItems: "center",
               justifyContent: "center",
               borderRadius: "8px",
-              padding: "40px 60px",
+              padding: "40px 60px", // Keep original padding
+              // width: "80px",        // Keep original width
+              // height: "auto",       // Keep original height behavior
               transition: "transform 0.3s ease",
               boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
               position: "relative",
@@ -166,6 +174,6 @@ export default function WhatIDo() {
           </Box>
         ))}
       </Box>
-    </>
+    </Box>
   );
 }
