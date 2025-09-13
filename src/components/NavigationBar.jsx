@@ -15,8 +15,8 @@ export default function NavigationBar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = menuItems.map(item => ({
-        id: item.path, // Use path directly since it matches the section IDs
-        element: document.getElementById(item.path)
+        id: item.path,
+        element: document.getElementById(item.path),
       }));
 
       const currentSection = sections.find(section => {
@@ -28,31 +28,33 @@ export default function NavigationBar() {
       });
 
       if (currentSection) {
-        const activeItem = menuItems.find(item => item.path === currentSection.id);
+        const activeItem = menuItems.find(
+          item => item.path === currentSection.id
+        );
         if (activeItem) {
           setActive(activeItem.label);
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleClick = (item) => {
     setActive(item.label);
-    
+
     // Smooth scroll to section
     const element = document.getElementById(item.path);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
-    
-    // Update URL hash without page reload
-    window.history.pushState(null, null, `${item.path}`);
+
+    // ✅ Update hash so GitHub Pages routing works
+    window.location.hash = `#/${item.path}`;
   };
 
   return (

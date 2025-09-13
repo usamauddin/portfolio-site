@@ -96,7 +96,8 @@ export default function WhatIDo() {
           color: "white",
           fontFamily: "Raleway",
           textAlign: "center",
-          py: { xs: 2, md: 3 }
+          mb: '24px'
+          // py: { xs: 2, md: 3 }
         }}
       >
         What I Do
@@ -106,21 +107,22 @@ export default function WhatIDo() {
         sx={{
           display: "grid",
           gridTemplateColumns: {
-            xs: "repeat(2, 80px)",      // 2 columns on extra small screens
+            xs: "repeat(3, 80px)",      // 2 columns on extra small screens
             sm: "repeat(3, 80px)",      // 3 columns on small screens
             md: "repeat(4, 80px)",      // 4 columns on medium screens
             lg: "repeat(9, 80px)",      // 6 columns on large screens
             xl: "repeat(9, 80px)"       // 9 columns on extra large screens
           },
-          gap: "20px 50px",
-          justifyContent: "center",
-          padding: { xs: "20px", sm: "25px", md: "30px" },
+          gap: "20px 55px",
+          // justifyContent: "center",
+          // padding: { xs: "20px", sm: "25px", md: "30px" },
           scrollbarWidth: "none",
           "&::-webkit-scrollbar": { display: "none" },
           backgroundColor: "#041C32",
           // border: '1px solid white',
-          justifyContent: 'center',
-          alignItems: 'center'
+          // margin: 'auto'
+          // justifyContent: 'space-around',
+          // alignItems: 'center'
         }}
       >
         {images.map((item) => (
@@ -134,7 +136,7 @@ export default function WhatIDo() {
               justifyContent: "center",
               borderRadius: "8px",
               padding: "40px 60px", // Keep original padding
-              // width: "80px",        // Keep original width
+              // width: "auto",        // Keep original width
               // height: "auto",       // Keep original height behavior
               transition: "transform 0.3s ease",
               boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
