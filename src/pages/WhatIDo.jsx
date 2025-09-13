@@ -1,4 +1,3 @@
-
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
@@ -65,6 +64,18 @@ export default function WhatIDo() {
       label: "Digital Ocean",
     },
     {
+      url: "https://img.icons8.com/color/48/prisma-orm.png",
+      label: "Prisma ORM",
+    },
+    {
+      url: "https://img.icons8.com/fluency/50/paypal.png",
+      label: "PayPal",
+    },
+    {
+      url: "https://img.icons8.com/color/48/amazon-web-services.png",
+      label: "AWS",
+    },
+    {
       url: "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/03/CICD.png",
       label: "CI CD Pipeline",
     },
@@ -84,7 +95,7 @@ export default function WhatIDo() {
         maxWidth: "1200px",
         backgroundColor: "#041C32",
         // border: '1px solid white',
-        margin: 'auto',
+        margin: "auto",
         // px: { xs: 2, sm: 3, md: 4 }
       }}
     >
@@ -96,7 +107,7 @@ export default function WhatIDo() {
           color: "white",
           fontFamily: "Raleway",
           textAlign: "center",
-          mb: '24px'
+          mb: "24px",
           // py: { xs: 2, md: 3 }
         }}
       >
@@ -107,11 +118,11 @@ export default function WhatIDo() {
         sx={{
           display: "grid",
           gridTemplateColumns: {
-            xs: "repeat(3, 80px)",      // 2 columns on extra small screens
-            sm: "repeat(3, 80px)",      // 3 columns on small screens
-            md: "repeat(4, 80px)",      // 4 columns on medium screens
-            lg: "repeat(9, 80px)",      // 6 columns on large screens
-            xl: "repeat(9, 80px)"       // 9 columns on extra large screens
+            xs: "repeat(3, 80px)", // 2 columns on extra small screens
+            sm: "repeat(3, 80px)", // 3 columns on small screens
+            md: "repeat(4, 80px)", // 4 columns on medium screens
+            lg: "repeat(9, 80px)", // 6 columns on large screens
+            xl: "repeat(9, 80px)", // 9 columns on extra large screens
           },
           gap: "20px 55px",
           // justifyContent: "center",
