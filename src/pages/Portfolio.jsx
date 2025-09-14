@@ -115,7 +115,7 @@ export default function Portfolio() {
                 color: "rgba(255,255,255,0.9)",
                 fontFamily: "Raleway",
                 // color: "#00AEEF",
-                fontWeight: "700",
+                fontWeight: "500",
               }}
             >
               {project.title}
