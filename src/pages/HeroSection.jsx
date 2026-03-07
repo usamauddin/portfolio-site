@@ -8,24 +8,28 @@ export default function HeroSection() {
     <>
       <Box
         sx={{
+          margin: "auto",
+          maxWidth: "80%",
           display: "flex",
+          // flexDirection: 'column',
           alignItems: "center",
           justifyContent: "space-between",
           backgroundColor: "#041C32",
           padding: { xs: "40px 20px", md: "80px 100px" },
+          // border: '1px solid white',
           flexWrap: "wrap",
           // margin: 0,
           // padding: 0,
         }}
       >
         {/* Left Content */}
-        <Box sx={{ maxWidth: "550px", color: "#fff" }}>
+        <Box sx={{ color: "#fff", maxWidth: "50%" }}>
           <Typography
             variant="h3"
             sx={{
               fontWeight: 500,
               mb: 1,
-              fontSize: { xs: "28px", md: "50px" },
+              fontSize: { xs: "28px", md: "50px", xl: "70px" },
               fontFamily: "Raleway",
             }}
           >
@@ -46,12 +50,13 @@ export default function HeroSection() {
           <Typography
             variant="body1"
             sx={{
-              fontWeight: 400,
               lineHeight: 1.6,
               color: "#A9B4C2",
               mb: 3,
               fontFamily: "nunito sans",
-            //   fontFamily: "Livvic",
+              //   fontFamily: "Livvic",
+              fontWeight: 400,
+              fontSize: "1.2em",
             }}
           >
             Architecting and optimizing high-performance backend systems that
@@ -67,13 +72,13 @@ export default function HeroSection() {
                 border: "2px solid #00AEEF",
                 color: "#00AEEF",
                 "&:hover": { boxShadow: "0 0 5px #00AEEF, 0 0 20px #00AEEF" },
-                padding: 1.5
+                padding: 2,
               }}
               onClick={() =>
                 window.open("https://github.com/usamauddin", "_blank")
               }
             >
-              <GitHub  fontSize="medium" />
+              <GitHub fontSize="large" />
             </IconButton>
             <IconButton
               sx={{
@@ -82,30 +87,32 @@ export default function HeroSection() {
                 "&:hover": {
                   boxShadow: "0 0 5px #00AEEF, 0 0 20px #00AEEF",
                 },
-                padding: 1.5
+                padding: 2,
               }}
               onClick={() =>
-                window.open("https://www.linkedin.com/in/usama-uddin/", "_blank")
+                window.open(
+                  "https://www.linkedin.com/in/usama-uddin/",
+                  "_blank",
+                )
               }
             >
-              <LinkedIn fontSize="medium" />
+              <LinkedIn fontSize="large" />
             </IconButton>
             <IconButton
               sx={{
                 border: "2px solid #00AEEF",
                 color: "#00AEEF",
                 "&:hover": { boxShadow: "0 0 5px #00AEEF, 0 0 20px #00AEEF" },
-                padding: 1.5
-                
+                padding: 2,
               }}
               onClick={() =>
                 window.open(
                   "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=usamahafeez948@gmail.com",
-                  "_blank"
+                  "_blank",
                 )
               }
             >
-              <Email fontSize="medium" />
+              <Email fontSize="large" />
             </IconButton>
           </Stack>
         </Box>

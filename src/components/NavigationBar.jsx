@@ -82,7 +82,7 @@ export default function NavigationBar() {
             <Typography
               sx={{
                 fontWeight: 500,
-                fontSize: "18px",
+                fontSize: "1.5em",
                 color: "#fff",
                 transition: "color 0.3s ease",
                 fontFamily: "nunito sans",

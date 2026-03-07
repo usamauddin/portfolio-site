@@ -30,7 +30,6 @@ export default function Portfolio() {
         "FN-AD BP is a powerful project management solution tailored for the fashion industry, designed to streamline post-sales operations with precision and efficiency. It automates brand-to-member assignments, tracks complete project lifecycles, and provides intuitive visual dashboards enriched with smart alerts and data-driven insights. Built for scalability, FN-AD BP supports growing teams and complex workflows, ensuring seamless collaboration across departments. By enhancing transparency, improving decision-making, and boosting overall productivity, it empowers fashion businesses to manage operations effectively and achieve long-term success.",
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/07/FN-AD-BP-Main-Portfolio-1.png",
-      // image: "file:///C:/Users/Usama/Downloads/FN-AD-BP-Main-Portfolio-1.webp",
       url: "https://bp.fnadmatch.com/",
     },
     {
@@ -45,7 +44,14 @@ export default function Portfolio() {
   ];
 
   return (
-    <Box sx={{ bgcolor: "#041C32", mt: 10 }}>
+    <Box
+      sx={{
+        bgcolor: "#041C32",
+        maxWidth: "80%",
+        mx: "auto", // center horizontally
+        mt: '80px', // margin-top
+      }}
+    >
       <Typography
         variant="h2"
         sx={{
@@ -64,16 +70,16 @@ export default function Portfolio() {
         <Box
           key={project.name}
           sx={{
-            maxWidth: "1200px",
+            // maxWidth: "1200px",
             mx: "auto",
             display: "flex",
             flexDirection: {
               xs: "column",
               md: index % 2 === 0 ? "row" : "row-reverse", // alternate layout
             },
-            alignItems: "center",
+            // alignItems: "center",
             gap: 4,
-            mb: 15,
+            mt: index === 0 ? 7 : 12,
           }}
         >
           {/* Content */}
@@ -88,7 +94,7 @@ export default function Portfolio() {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between",
+                // justifyContent: "space-between",
                 gap: 1,
                 mb: 1,
               }}
@@ -99,12 +105,18 @@ export default function Portfolio() {
                   fontWeight: 700,
                   fontFamily: "nunito sans",
                   color: "#00AEEF",
+                  // fontSize:
                 }}
               >
                 {project.name}
               </Typography>
               <OpenInNewIcon
-                sx={{ color: "#00AEEF", fontSize: "1.5rem", cursor: "pointer" }}
+                sx={{
+                  color: "#00AEEF",
+                  fontSize: "1.5rem",
+                  cursor: "pointer",
+                  ml: 2,
+                }}
                 onClick={() => window.open(project.url, "_blank")}
               />
             </Box>
@@ -115,7 +127,9 @@ export default function Portfolio() {
                 color: "rgba(255,255,255,0.9)",
                 fontFamily: "Raleway",
                 // color: "#00AEEF",
-                fontWeight: "500",
+                fontWeight: "600",
+                // fontWeight: 400,
+                fontSize: "1.3em",
               }}
             >
               {project.title}
@@ -123,10 +137,13 @@ export default function Portfolio() {
             <Typography
               variant="body1"
               sx={{
+                // fontSize: "1.1em",
                 color: "rgba(255,255,255,0.87)",
                 lineHeight: 1.6,
                 fontFamily: "nunito sans",
                 color: "#A9B4C2",
+                fontWeight: 100,
+                fontSize: "1.2em",
               }}
             >
               {project.description}
@@ -148,13 +165,13 @@ export default function Portfolio() {
               src={project.image}
               alt={project.name}
               sx={{
-                backgroundColor: "#082A43",
+                // backgroundColor: "#082A43",
                 width: "100%",
                 maxWidth: 500,
                 objectFit: "contain",
                 borderRadius: "8px",
-                boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
-                p: 3,
+                // boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
+                // p: 3,
                 cursor: "pointer",
                 maxHeight:
                   project?.name?.toLowerCase() === "picture perfect"

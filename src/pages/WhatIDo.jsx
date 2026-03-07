@@ -80,6 +80,10 @@ export default function WhatIDo() {
       label: "CI CD Pipeline",
     },
     {
+      url: "https://craft.postmark-testing.com/images/logo-stamp-social.png",
+      label: "Postmark",
+    },
+    {
       url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1755021695/sockets_edgkso.svg",
       label: "Web Sockets",
     },
@@ -87,16 +91,27 @@ export default function WhatIDo() {
       url: "https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000",
       label: "Postman",
     },
+    {
+      url: "https://img.icons8.com/color/48/onesignal.png",
+      label: "One Signal",
+    },
+    {
+      url: "https://blog.nodemailer.com/wp-content/uploads/2017/01/cropped-nm_logo_1000x680.png",
+      label: "Nodemailer",
+    },
+    {
+      url: "https://img.icons8.com/fluency/48/supabase.png",
+      label: "Supabase",
+    },
   ];
 
   return (
     <Box
       sx={{
-        maxWidth: "1200px",
-        backgroundColor: "#041C32",
-        // border: '1px solid white',
-        margin: "auto",
-        // px: { xs: 2, sm: 3, md: 4 }
+        bgcolor: "#041C32",
+        maxWidth: "80%",
+        mx: "auto", // center horizontally
+        mt: 4, // margin-top
       }}
     >
       <Typography
@@ -122,9 +137,9 @@ export default function WhatIDo() {
             sm: "repeat(3, 80px)", // 3 columns on small screens
             md: "repeat(4, 80px)", // 4 columns on medium screens
             lg: "repeat(9, 80px)", // 6 columns on large screens
-            xl: "repeat(9, 80px)", // 9 columns on extra large screens
+            xl: "repeat(10, 80px)", // 9 columns on extra large screens
           },
-          gap: "20px 55px",
+          gap: "25px 75px",
           // justifyContent: "center",
           // padding: { xs: "20px", sm: "25px", md: "30px" },
           scrollbarWidth: "none",
@@ -146,7 +161,7 @@ export default function WhatIDo() {
               alignItems: "center",
               justifyContent: "center",
               borderRadius: "8px",
-              padding: "40px 60px", // Keep original padding
+              padding: "50px 70px", // Keep original padding
               // width: "auto",        // Keep original width
               // height: "auto",       // Keep original height behavior
               transition: "transform 0.3s ease",
@@ -173,7 +188,7 @@ export default function WhatIDo() {
               variant="body1"
               className="label"
               style={{
-                fontSize: "0.8em",
+                fontSize: "1em",
                 fontFamily: "nunito sans",
                 fontWeight: 400,
                 position: "absolute",
