@@ -10,7 +10,7 @@ export default function Portfolio() {
       title: "Urdu Digital Library App",
       description:
         "Adeeb Online is a subscription-based digital library that provides access to a large collection of Urdu books, novels, and poetry for readers worldwide. The platform offers both free and premium content, with premium users enjoying ad-free reading and offline downloads. It supports features like bookmarks, personal libraries, and cross-device synchronization. The app also supports authors by sharing revenue and publishing content with proper copyright permissions.",
-      image: "",
+      image: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1772993879/Untitled_sueopz.png",
       url: "https://www.web.adeebonline.com/home",
     },
     {
@@ -189,6 +189,8 @@ export default function Portfolio() {
                 borderRadius: "8px",
                 // boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
                 // p: 3,
+                // position: index === 0 && 'absolute',
+
                 cursor: "pointer",
                 maxHeight:
                   project?.name?.toLowerCase() === "picture perfect"
