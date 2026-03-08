@@ -6,6 +6,23 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 export default function Portfolio() {
   const projects = [
     {
+      name: "Adeeb Online",
+      title: "Urdu Digital Library App",
+      description:
+        "Adeeb Online is a subscription-based digital library that provides access to a large collection of Urdu books, novels, and poetry for readers worldwide. The platform offers both free and premium content, with premium users enjoying ad-free reading and offline downloads. It supports features like bookmarks, personal libraries, and cross-device synchronization. The app also supports authors by sharing revenue and publishing content with proper copyright permissions.",
+      image: "",
+      url: "https://www.web.adeebonline.com/home",
+    },
+    {
+      name: "Tshabok AI",
+      title: "AI Powered Software Testing",
+      description:
+        "Tshabok.ai is an AI-powered platform that automatically generates software test cases from requirement documents or a provided website URL. It analyzes user flows and system behavior to create structured test scenarios, including edge cases. The tool helps QA teams and developers significantly reduce the time spent writing manual test cases. By automating test design, it improves testing coverage and accelerates the overall software development and release cycle.",
+      image:
+        "https://res.cloudinary.com/dqhylmpvk/image/upload/v1772957028/Untitled_lwfi2r.png",
+      url: "https://web.tshabok.ai/",
+    },
+    {
       name: "FN-AD Sales CRM",
       title: "AI-powered sales CRM for fashion",
       description:
@@ -18,7 +35,7 @@ export default function Portfolio() {
       name: "GetGeek",
       title: "The AI-Powered Talent Acquisition Software",
       description:
-        "Getgeek automates the most time-consuming parts of recruitment. From posting job ads across platforms to screening hundreds of resumes and conducting initial interviews, our AI ensures that only the top-qualified candidates land in your inbox. On average, recruiters save over 10+ hours per position—time you can now spend on strategic decision-making instead of tedious tasks.",
+        "Getgeek automates the most time-consuming parts of recruitment. From posting job ads across platforms to screening hundreds of resumes and conducting initial interviews, our AI ensures that only the top-qualified candidates land in your inbox. On average, recruiters save over 10+ hours per position time you can now spend on strategic decision-making instead of tedious tasks.",
       image:
         "https://ramiz-qazi-portfolio-v2.netlify.app/static/media/getgeek.b4c42b6d70a31dcfd1cd.png",
       url: "https://app.getgeek.ai",
@@ -36,7 +53,7 @@ export default function Portfolio() {
       name: "Picture Perfect",
       title: "AI-powered Photo Editing Tool",
       description:
-        "Group photos, especially with kids, are notoriously hard to perfect—someone always looks away or refuses to smile. Picture Perfect solves this challenge using AI-powered capture. Instead of a single shot, every photo becomes a 5-second capture analyzing 150 micro-moments. The app then offers the best facial expressions for each person, letting you instantly “swap” faces so everyone looks their best. Importantly, these are not AI-generated fakes but real expressions captured during that moment. Once satisfied, you can download the polished photo directly to your library. It also works for selfies, making sure you always get your best shot. However, it’s designed for people, not pets, objects, or landscapes—ensuring the focus remains on creating flawless human-centered photos.",
+        "Group photos, especially with kids, are notoriously hard to perfect someone always looks away or refuses to smile. Picture Perfect solves this challenge using AI-powered capture. Instead of a single shot, every photo becomes a 5-second capture analyzing 150 micro-moments. The app then offers the best facial expressions for each person, letting you instantly “swap” faces so everyone looks their best. Importantly, these are not AI-generated fakes but real expressions captured during that moment. Once satisfied, you can download the polished photo directly to your library. It also works for selfies, making sure you always get your best shot. However, it’s designed for people, not pets, objects, or landscapes ensuring the focus remains on creating flawless human-centered photos.",
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2024/10/Pictureperfect-process-image.png",
       url: "https://play.google.com/store/apps/details?id=com.picper&hl=en",
@@ -49,7 +66,7 @@ export default function Portfolio() {
         bgcolor: "#041C32",
         maxWidth: "80%",
         mx: "auto", // center horizontally
-        mt: '80px', // margin-top
+        mt: "80px", // margin-top
       }}
     >
       <Typography
@@ -108,7 +125,7 @@ export default function Portfolio() {
                   // fontSize:
                 }}
               >
-                {project.name}
+                {project.name?.toUpperCase()}
               </Typography>
               <OpenInNewIcon
                 sx={{
@@ -132,7 +149,7 @@ export default function Portfolio() {
                 fontSize: "1.3em",
               }}
             >
-              {project.title}
+              {project.title?.toUpperCase()}
             </Typography>
             <Typography
               variant="body1"
