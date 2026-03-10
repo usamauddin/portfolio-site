@@ -10,8 +10,10 @@ export default function Portfolio() {
       title: "Urdu Digital Library App",
       description:
         "Adeeb Online is a subscription-based digital library that provides access to a large collection of Urdu books, novels, and poetry for readers worldwide. The platform offers both free and premium content, with premium users enjoying ad-free reading and offline downloads. It supports features like bookmarks, personal libraries, and cross-device synchronization. The app also supports authors by sharing revenue and publishing content with proper copyright permissions.",
-      image: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1772993879/Untitled_sueopz.png",
+      image:
+        "https://res.cloudinary.com/dqhylmpvk/image/upload/v1773160052/Untitled_1_sugrei.png",
       url: "https://www.web.adeebonline.com/home",
+      maxWidth: 700,
     },
     {
       name: "Tshabok AI",
@@ -21,6 +23,7 @@ export default function Portfolio() {
       image:
         "https://res.cloudinary.com/dqhylmpvk/image/upload/v1772957028/Untitled_lwfi2r.png",
       url: "https://web.tshabok.ai/",
+      maxWidth: 500,
     },
     {
       name: "FN-AD Sales CRM",
@@ -30,6 +33,7 @@ export default function Portfolio() {
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/06/FN-AD-Sales-CRM-Main-Portfolio.png",
       url: "https://fnadmatch.com/",
+      maxWidth: 500,
     },
     {
       name: "GetGeek",
@@ -39,6 +43,7 @@ export default function Portfolio() {
       image:
         "https://ramiz-qazi-portfolio-v2.netlify.app/static/media/getgeek.b4c42b6d70a31dcfd1cd.png",
       url: "https://app.getgeek.ai",
+      maxWidth: 500,
     },
     {
       name: "FN-AD BP",
@@ -48,6 +53,7 @@ export default function Portfolio() {
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/07/FN-AD-BP-Main-Portfolio-1.png",
       url: "https://bp.fnadmatch.com/",
+      maxWidth: 500,
     },
     {
       name: "Picture Perfect",
@@ -57,6 +63,7 @@ export default function Portfolio() {
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2024/10/Pictureperfect-process-image.png",
       url: "https://play.google.com/store/apps/details?id=com.picper&hl=en",
+      maxWidth: 500,
     },
   ];
 
@@ -184,7 +191,7 @@ export default function Portfolio() {
               sx={{
                 // backgroundColor: "#082A43",
                 width: "100%",
-                maxWidth: 500,
+                maxWidth: project.maxWidth,
                 objectFit: "contain",
                 borderRadius: "8px",
                 // boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
