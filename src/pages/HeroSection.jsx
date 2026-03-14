@@ -9,54 +9,61 @@ export default function HeroSection() {
       <Box
         sx={{
           margin: "auto",
-          maxWidth: "80%",
+          maxWidth: "1400px",
+          width: "90%",
           display: "flex",
-          // flexDirection: 'column',
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           justifyContent: "space-between",
           backgroundColor: "#041C32",
-          padding: { xs: "40px 20px", md: "80px 100px" },
-          // border: '1px solid white',
-          flexWrap: "wrap",
-          // margin: 0,
-          // padding: 0,
+          padding: { xs: "40px 20px", sm: "60px 40px", md: "80px 60px" },
+          gap: { xs: 6, md: 4 },
         }}
       >
         {/* Left Content */}
-        <Box sx={{ color: "#fff", maxWidth: "50%" }}>
+        <Box
+          sx={{
+            color: "#fff",
+            width: { xs: "100%", md: "55%" },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
           <Typography
-            variant="h3"
             sx={{
               fontWeight: 500,
               mb: 1,
-              fontSize: { xs: "28px", md: "50px", xl: "70px" },
+              fontSize: { xs: "30px", sm: "36px", md: "48px", xl: "64px" },
               fontFamily: "Raleway",
+              lineHeight: 1.2,
             }}
           >
             Hey, I'm Usama Uddin
           </Typography>
+
           <Typography
-            variant="h4"
             sx={{
               fontWeight: 700,
               color: "#00AEEF",
-              fontSize: { xs: "20px", md: "40px" },
+              fontSize: { xs: "20px", sm: "26px", md: "34px" },
               mb: 2,
               fontFamily: "Livvic",
             }}
           >
             Backend Engineer
           </Typography>
+
           <Typography
-            variant="body1"
             sx={{
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               color: "#A9B4C2",
-              mb: 3,
-              fontFamily: "nunito sans",
-              //   fontFamily: "Livvic",
-              fontWeight: 400,
-              fontSize: "1.2em",
+              mb: 4,
+              fontFamily: "Nunito Sans",
+              // fontWeight: 200,
+                fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem", lg: "1.3em" },
+              // fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem", lg: "1.1em" },
+              // fontSize: { xs: "15px", sm: "16px", md: "18px" },
+              maxWidth: { xs: "100%", md: "90%" },
+              marginX: { xs: "auto", md: 0 },
             }}
           >
             Architecting and optimizing high-performance backend systems that
@@ -66,53 +73,63 @@ export default function HeroSection() {
           </Typography>
 
           {/* Social Icons */}
-          <Stack direction="row" spacing={2}>
-            <IconButton
-              sx={{
-                border: "2px solid #00AEEF",
-                color: "#00AEEF",
-                "&:hover": { boxShadow: "0 0 5px #00AEEF, 0 0 20px #00AEEF" },
-                padding: 2,
-              }}
-              onClick={() =>
-                window.open("https://github.com/usamauddin", "_blank")
-              }
-            >
-              <GitHub fontSize="large" />
-            </IconButton>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent={{ xs: "center", md: "flex-start" }}
+          >
             <IconButton
               sx={{
                 border: "2px solid #00AEEF",
                 color: "#00AEEF",
                 "&:hover": {
-                  boxShadow: "0 0 5px #00AEEF, 0 0 20px #00AEEF",
+                  boxShadow: "0 0 8px #00AEEF, 0 0 20px #00AEEF",
                 },
-                padding: 2,
+                padding: { xs: 1.2, md: 1.5 },
               }}
               onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/usama-uddin/",
-                  "_blank",
-                )
+                window.open("https://github.com/usamauddin", "_blank")
               }
             >
-              <LinkedIn fontSize="large" />
+              <GitHub sx={{ fontSize: { xs: 24, md: 30 } }} />
             </IconButton>
+
             <IconButton
               sx={{
                 border: "2px solid #00AEEF",
                 color: "#00AEEF",
-                "&:hover": { boxShadow: "0 0 5px #00AEEF, 0 0 20px #00AEEF" },
-                padding: 2,
+                "&:hover": {
+                  boxShadow: "0 0 8px #00AEEF, 0 0 20px #00AEEF",
+                },
+                padding: { xs: 1.2, md: 1.5 },
+              }}
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/usama-uddin/",
+                  "_blank"
+                )
+              }
+            >
+              <LinkedIn sx={{ fontSize: { xs: 24, md: 30 } }} />
+            </IconButton>
+
+            <IconButton
+              sx={{
+                border: "2px solid #00AEEF",
+                color: "#00AEEF",
+                "&:hover": {
+                  boxShadow: "0 0 8px #00AEEF, 0 0 20px #00AEEF",
+                },
+                padding: { xs: 1.2, md: 1.5 },
               }}
               onClick={() =>
                 window.open(
                   "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=usamahafeez948@gmail.com",
-                  "_blank",
+                  "_blank"
                 )
               }
             >
-              <Email fontSize="large" />
+              <Email sx={{ fontSize: { xs: 24, md: 30 } }} />
             </IconButton>
           </Stack>
         </Box>
@@ -120,13 +137,13 @@ export default function HeroSection() {
         {/* Right Profile Image */}
         <Box
           sx={{
-            width: { xs: "220px", md: "400px" },
-            height: { xs: "220px", md: "400px" },
+            width: { xs: 200, sm: 260, md: 340, lg: 400 },
+            height: { xs: 200, sm: 260, md: 340, lg: 400 },
             borderRadius: "50%",
             overflow: "hidden",
             border: "4px solid #00AEEF",
-            mt: { xs: 4, md: 0 },
             boxShadow: "0 0 30px rgba(0,174,239,0.6)",
+            flexShrink: 0,
           }}
         >
           <img
@@ -136,6 +153,7 @@ export default function HeroSection() {
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              display: "block",
               cursor: "pointer",
             }}
           />
@@ -143,4 +161,4 @@ export default function HeroSection() {
       </Box>
     </>
   );
-}
+} 

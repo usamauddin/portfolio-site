@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Container, Typography } from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 
 export default function WhoAmI() {
   const expertise = [
@@ -38,20 +38,23 @@ export default function WhoAmI() {
     <Box
       component="section"
       sx={{
-        // margin: "auto",
-        // mt: 10,
         backgroundColor: "#041C32",
-        maxWidth: "80%",
-        // border: "1px solid white",
-        mx: "auto", // center horizontally
-        mt: '80px',
+        maxWidth: "1400px",
+        width: "90%",
+        // width: "100%",
+        // maxWidth: { xs: "100%", sm: "90%", md: "85%", lg: "80%" },
+        mx: "auto",
+        mt: { xs: "40px", sm: "60px", md: "80px" },
+        px: { xs: 2, sm: 3, md: 0 }, // side padding on small screens
+        // overflow: ''
       }}
     >
+      {/* Header + Bio */}
       <Box>
         <Typography
           variant="h2"
           sx={{
-            fontSize: { xs: "2rem", md: "3rem" },
+            fontSize: { xs: "1.6rem", sm: "2rem", md: "2.5rem", lg: "3rem" },
             fontWeight: "700",
             mb: 3,
             color: "white",
@@ -61,14 +64,14 @@ export default function WhoAmI() {
         >
           Who Am I
         </Typography>
+
         <Box sx={{ display: "flex", flexDirection: "column", mb: 3, flex: 1 }}>
           <Typography
             variant="body1"
             sx={{
-              fontSize: "1.3em",
+              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem", lg: "1.3em" },
               lineHeight: 1.6,
               color: "hsl(215 20.2% 65.1%)",
-              // fontFamily: "Livvic",
               fontFamily: "nunito sans",
               fontWeight: "100",
               textAlign: "center",
@@ -81,14 +84,11 @@ export default function WhoAmI() {
               component="span"
               sx={{
                 color: "hsl(200 100% 60%)",
-                // fontFamily: "Livvic",
                 fontFamily: "nunito sans",
-                // fontWeight: 400,
                 textAlign: "center",
               }}
             >
-              {" "}
-              NestJS{" "}
+              {" "}NestJS{" "}
             </Typography>
             and experienced with both SQL and NoSQL databases. Strong background
             in system design, microservices architecture, and message queuing
@@ -99,28 +99,22 @@ export default function WhoAmI() {
               component="span"
               sx={{
                 color: "hsl(280 100% 70%)",
-                // fontFamily: "Livvic",
                 fontFamily: "nunito sans",
-                // fontWeight: 400,
                 textAlign: "center",
               }}
             >
-              {" "}
-              cloud-native{" "}
+              {" "}cloud-native{" "}
             </Typography>
             solutions and
             <Typography
               component="span"
               sx={{
                 color: "hsl(150 70% 60%)",
-                // fontFamily: "Livvic",
                 fontFamily: "nunito sans",
-                // fontWeight: 400,
                 textAlign: "center",
               }}
             >
-              {" "}
-              event-driven{" "}
+              {" "}event-driven{" "}
             </Typography>
             architectures that can handle massive scale and provide exceptional
             user experiences.
@@ -128,11 +122,17 @@ export default function WhoAmI() {
         </Box>
       </Box>
 
+      {/* Expertise Cards Grid */}
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr 1fr 1fr 1fr" },
-          gap: 2,
+          gridTemplateColumns: {
+            xs: "1fr",           // 1 column on mobile
+            sm: "1fr 1fr",       // 2 columns on small tablets
+            md: "1fr 1fr 1fr",   // 3 columns on medium screens
+            lg: "repeat(5, 1fr)",// 5 columns on large screens
+          },
+          gap: { xs: 2, md: 2 },
         }}
       >
         {expertise.map((item) => (
@@ -140,7 +140,7 @@ export default function WhoAmI() {
             key={item.title}
             sx={{
               borderRadius: "8px",
-              p: 2,
+              p: { xs: 1.5, md: 2 },
               boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
               backgroundColor: "#082A43",
               transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -157,7 +157,7 @@ export default function WhoAmI() {
               <Typography
                 className="icon"
                 sx={{
-                  fontSize: "2rem",
+                  fontSize: { xs: "1.6rem", md: "2rem" },
                   mb: 1.5,
                   transition: "transform 0.3s ease",
                   fontFamily: "Raleway",
@@ -169,10 +169,9 @@ export default function WhoAmI() {
                 variant="h6"
                 className="title"
                 sx={{
-                  fontSize: "1.3em",
+                  fontSize: { xs: "1rem", sm: "1.1em", md: "1.2em", lg: "1.3em" },
                   fontWeight: 600,
                   mb: 1,
-                  // color: 'white',
                   color: "#00AEEF",
                   transition: "color 0.3s ease",
                   fontFamily: "Raleway",
@@ -183,10 +182,9 @@ export default function WhoAmI() {
               <Typography
                 variant="body2"
                 sx={{
-                  fontSize: "1.1em",
+                  fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem", lg: "1.1em" },
                   color: "hsl(215 20.2% 65.1%)",
                   lineHeight: 1.6,
-                  // fontFamily: "Livvic",
                   fontFamily: "nunito sans",
                   fontWeight: 100,
                 }}

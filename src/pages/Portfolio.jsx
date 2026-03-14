@@ -71,103 +71,90 @@ export default function Portfolio() {
     <Box
       sx={{
         bgcolor: "#041C32",
-        maxWidth: "80%",
-        mx: "auto", // center horizontally
-        mt: "80px", // margin-top
+        maxWidth: "1400px",
+        width: "90%",
+        mx: "auto",
+        mt: { xs: 6, md: 10 },
       }}
     >
       <Typography
-        variant="h2"
         sx={{
-          fontSize: { xs: "2rem", md: "3rem" },
-          fontWeight: "700",
+          fontSize: { xs: "32px", sm: "40px", md: "48px" },
+          fontWeight: 700,
           color: "white",
-          // fontFamily: "nunito sans",
           fontFamily: "Raleway",
           textAlign: "center",
-          mb: 3,
+          mb: { xs: 6, md: 10 },
         }}
       >
         Portfolio
       </Typography>
+
       {projects.map((project, index) => (
         <Box
           key={project.name}
           sx={{
-            // maxWidth: "1200px",
-            mx: "auto",
             display: "flex",
             flexDirection: {
               xs: "column",
-              md: index % 2 === 0 ? "row" : "row-reverse", // alternate layout
+              md: index % 2 === 0 ? "row" : "row-reverse",
             },
-            // alignItems: "center",
-            gap: 4,
-            mt: index === 0 ? 7 : 12,
+            alignItems: "center",
+            gap: { xs: 4, md: 8 },
+            mb: { xs: 8, md: 14 },
           }}
         >
-          {/* Content */}
-          <Box
-            sx={{
-              flex: "1",
-              color: "#fff",
-              //   px: { xs: 2, md: 4 },
-            }}
-          >
+          {/* Text Content */}
+          <Box sx={{ flex: 1 }}>
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
-                // justifyContent: "space-between",
                 gap: 1,
                 mb: 1,
               }}
             >
               <Typography
-                variant="h4"
                 sx={{
                   fontWeight: 700,
-                  fontFamily: "nunito sans",
+                  fontFamily: "Nunito Sans",
                   color: "#00AEEF",
-                  // fontSize:
+                  fontSize: { xs: "22px", md: "28px" },
                 }}
               >
-                {project.name?.toUpperCase()}
+                {project.name.toUpperCase()}
               </Typography>
+
               <OpenInNewIcon
                 sx={{
                   color: "#00AEEF",
-                  fontSize: "1.5rem",
+                  fontSize: { xs: 20, md: 24 },
                   cursor: "pointer",
-                  ml: 2,
                 }}
                 onClick={() => window.open(project.url, "_blank")}
               />
             </Box>
+
             <Typography
-              variant="h6"
               sx={{
                 mb: 2,
-                color: "rgba(255,255,255,0.9)",
+                color: "white",
                 fontFamily: "Raleway",
-                // color: "#00AEEF",
-                fontWeight: "600",
-                // fontWeight: 400,
-                fontSize: "1.3em",
+                fontWeight: 600,
+                fontSize: { xs: "16px", md: "20px" },
               }}
             >
-              {project.title?.toUpperCase()}
+              {project.title.toUpperCase()}
             </Typography>
+
             <Typography
-              variant="body1"
               sx={{
-                // fontSize: "1.1em",
-                color: "rgba(255,255,255,0.87)",
-                lineHeight: 1.6,
-                fontFamily: "nunito sans",
                 color: "#A9B4C2",
-                fontWeight: 100,
-                fontSize: "1.2em",
+                lineHeight: 1.7,
+                fontFamily: "Nunito Sans",
+                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem", lg: "1.1em" },
+                // fontSize: { xs: "14px", sm: "15px", md: "17px" },
+                maxWidth: "600px",
               }}
             >
               {project.description}
@@ -177,11 +164,9 @@ export default function Portfolio() {
           {/* Image */}
           <Box
             sx={{
-              flex: "1",
+              flex: 1,
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
-              //   px: { xs: 2, md: 4 },
             }}
           >
             <Box
@@ -189,21 +174,18 @@ export default function Portfolio() {
               src={project.image}
               alt={project.name}
               sx={{
-                // backgroundColor: "#082A43",
                 width: "100%",
                 maxWidth: project.maxWidth,
+                borderRadius: "10px",
                 objectFit: "contain",
-                borderRadius: "8px",
-                // boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
-                // p: 3,
-                // position: index === 0 && 'absolute',
-
+                transition: "transform 0.4s ease",
                 cursor: "pointer",
-                maxHeight:
-                  project?.name?.toLowerCase() === "picture perfect"
-                    ? "400px"
-                    : "auto",
+
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
               }}
+              onClick={() => window.open(project.url, "_blank")}
             />
           </Box>
         </Box>

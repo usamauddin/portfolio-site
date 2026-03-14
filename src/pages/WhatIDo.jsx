@@ -87,10 +87,10 @@ export default function WhatIDo() {
       url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1755021695/sockets_edgkso.svg",
       label: "Web Sockets",
     },
-    {
-      url: "https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000",
-      label: "Postman",
-    },
+    // {
+    //   url: "https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000",
+    //   label: "Postman",
+    // },
     {
       url: "https://img.icons8.com/color/48/onesignal.png",
       label: "One Signal",
@@ -109,21 +109,21 @@ export default function WhatIDo() {
     <Box
       sx={{
         bgcolor: "#041C32",
-        maxWidth: "80%",
-        mx: "auto", // center horizontally
-        mt: 4, // margin-top
+        maxWidth: "1400px",
+        width: "90%",
+        mx: "auto",
+        mt: { xs: 4, md: 8 },
+        // border: '1px solid white'
       }}
     >
       <Typography
-        variant="h2"
         sx={{
-          fontSize: { xs: "2rem", md: "3rem" },
-          fontWeight: "700",
+          fontSize: { xs: "32px", sm: "40px", md: "48px" },
+          fontWeight: 700,
           color: "white",
           fontFamily: "Raleway",
           textAlign: "center",
-          mb: "24px",
-          // py: { xs: 2, md: 3 }
+          mb: { xs: 4, md: 6 },
         }}
       >
         What I Do
@@ -132,23 +132,8 @@ export default function WhatIDo() {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: {
-            xs: "repeat(3, 80px)", // 2 columns on extra small screens
-            sm: "repeat(3, 80px)", // 3 columns on small screens
-            md: "repeat(4, 80px)", // 4 columns on medium screens
-            lg: "repeat(9, 80px)", // 6 columns on large screens
-            xl: "repeat(10, 80px)", // 9 columns on extra large screens
-          },
-          gap: "25px 75px",
-          // justifyContent: "center",
-          // padding: { xs: "20px", sm: "25px", md: "30px" },
-          scrollbarWidth: "none",
-          "&::-webkit-scrollbar": { display: "none" },
-          backgroundColor: "#041C32",
-          // border: '1px solid white',
-          // margin: 'auto'
-          // justifyContent: 'space-around',
-          // alignItems: 'center'
+          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+          gap: { xs: 2, sm: 3, md: 4 },
         }}
       >
         {images.map((item) => (
@@ -160,42 +145,37 @@ export default function WhatIDo() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              borderRadius: "8px",
-              padding: "50px 70px", // Keep original padding
-              // width: "auto",        // Keep original width
-              // height: "auto",       // Keep original height behavior
-              transition: "transform 0.3s ease",
+              borderRadius: "10px",
+              padding: { xs: 2, sm: 3 },
+              transition: "all 0.3s ease",
               boxShadow: "0px 4px 15px rgba(0,0,0,0.5)",
-              position: "relative",
               cursor: "pointer",
+
               "&:hover": {
-                transform: "scale(1.1)",
-                "& .label": { color: "red" },
+                transform: "translateY(-6px) scale(1.05)",
+                boxShadow: "0px 10px 30px rgba(0, 175, 239, 0)",
               },
             }}
           >
             <img
               src={item.url}
-              alt=""
+              alt={item.label}
               loading="lazy"
               style={{
-                width: "70px",
-                height: "70px",
+                width: "clamp(35px, 5vw, 55px)",
+                height: "clamp(35px, 5vw, 55px)",
                 objectFit: "contain",
               }}
-            />
+              />
+
             <Typography
-              variant="body1"
-              className="label"
-              style={{
-                fontSize: "1em",
-                fontFamily: "nunito sans",
-                fontWeight: 400,
-                position: "absolute",
-                bottom: 7,
+              sx={{
+                fontSize: { xs: "12px", sm: "14px" },
+                fontFamily: "Nunito Sans",
                 color: "#A9B4C2",
+                textAlign: "center",
+                marginTop: "10px",
               }}
-              sx={{ mt: 1, fontWeight: 500, textAlign: "center" }}
             >
               {item.label}
             </Typography>
