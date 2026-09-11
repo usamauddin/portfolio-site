@@ -32,7 +32,8 @@ export default function Portfolio() {
         "FN-AD is a leading enterprise branding agency that helps fashion brands connect with wholesalers and expand into global markets. Our AI-powered CRM is purpose-built for, automating lead generation, profiling, and assignment. Operating 24/7, it continuously captures new leads, creates detailed brand profiles, and intelligently matches them with the right sales team members through a smart lead assignment algorithm. With an integrated sales pipeline management system, FN-AD CRM streamlines workflows, enhances efficiency, and drives higher conversion rates.",
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/06/FN-AD-Sales-CRM-Main-Portfolio.png",
-      url: "https://fnadmatch.com/",
+      // url: "https://fnadmatch.com/",
+      url: "https://fn-ad.co/",
       maxWidth: 500,
     },
     {
@@ -52,7 +53,8 @@ export default function Portfolio() {
         "FN-AD BP is a powerful project management solution tailored for the fashion industry, designed to streamline post-sales operations with precision and efficiency. It automates brand-to-member assignments, tracks complete project lifecycles, and provides intuitive visual dashboards enriched with smart alerts and data-driven insights. Built for scalability, FN-AD BP supports growing teams and complex workflows, ensuring seamless collaboration across departments. By enhancing transparency, improving decision-making, and boosting overall productivity, it empowers fashion businesses to manage operations effectively and achieve long-term success.",
       image:
         "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2025/07/FN-AD-BP-Main-Portfolio-1.png",
-      url: "https://bp.fnadmatch.com/",
+      // url: "https://bp.fnadmatch.com/",
+      url: "https://fn-ad.co/",
       maxWidth: 500,
     },
     {
@@ -152,7 +154,12 @@ export default function Portfolio() {
                 color: "#A9B4C2",
                 lineHeight: 1.7,
                 fontFamily: "Nunito Sans",
-                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem", lg: "1.1em" },
+                fontSize: {
+                  xs: "0.85rem",
+                  sm: "0.9rem",
+                  md: "1rem",
+                  lg: "1.1em",
+                },
                 // fontSize: { xs: "14px", sm: "15px", md: "17px" },
                 maxWidth: "600px",
               }}

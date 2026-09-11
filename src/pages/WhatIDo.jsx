@@ -80,28 +80,33 @@ export default function WhatIDo() {
       label: "CI CD Pipeline",
     },
     {
-      url: "https://craft.postmark-testing.com/images/logo-stamp-social.png",
+      url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1789145397/Postmarkapp_id4H7tq5Y__0_l0mbub.png",
       label: "Postmark",
     },
     {
       url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1755021695/sockets_edgkso.svg",
       label: "Web Sockets",
     },
-    // {
-    //   url: "https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000",
-    //   label: "Postman",
-    // },
+    {
+      url: "https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000",
+      label: "Postman",
+    },
     {
       url: "https://img.icons8.com/color/48/onesignal.png",
       label: "One Signal",
     },
     {
-      url: "https://blog.nodemailer.com/wp-content/uploads/2017/01/cropped-nm_logo_1000x680.png",
+      url: "https://nodemailer.com/img/nm_logo_200x136.png",
       label: "Nodemailer",
     },
     {
       url: "https://img.icons8.com/fluency/48/supabase.png",
       label: "Supabase",
+    },
+
+    {
+      url: "https://res.cloudinary.com/dqhylmpvk/image/upload/v1789145796/jazzcash-com-pk-logo_tfhxvo.png",
+      label: 'JazzCash'
     },
   ];
 
@@ -166,7 +171,7 @@ export default function WhatIDo() {
                 height: "clamp(35px, 5vw, 55px)",
                 objectFit: "contain",
               }}
-              />
+            />
 
             <Typography
               sx={{
