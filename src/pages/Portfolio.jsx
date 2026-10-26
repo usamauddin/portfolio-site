@@ -57,16 +57,16 @@ export default function Portfolio() {
       url: "https://fn-ad.co/",
       maxWidth: 500,
     },
-    {
-      name: "Picture Perfect",
-      title: "AI-powered Photo Editing Tool",
-      description:
-        "Group photos, especially with kids, are notoriously hard to perfect someone always looks away or refuses to smile. Picture Perfect solves this challenge using AI-powered capture. Instead of a single shot, every photo becomes a 5-second capture analyzing 150 micro-moments. The app then offers the best facial expressions for each person, letting you instantly “swap” faces so everyone looks their best. Importantly, these are not AI-generated fakes but real expressions captured during that moment. Once satisfied, you can download the polished photo directly to your library. It also works for selfies, making sure you always get your best shot. However, it’s designed for people, not pets, objects, or landscapes ensuring the focus remains on creating flawless human-centered photos.",
-      image:
-        "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2024/10/Pictureperfect-process-image.png",
-      url: "https://play.google.com/store/apps/details?id=com.picper&hl=en",
-      maxWidth: 500,
-    },
+    // {
+    //   name: "Picture Perfect",
+    //   title: "AI-powered Photo Editing Tool",
+    //   description:
+    //     "Group photos, especially with kids, are notoriously hard to perfect someone always looks away or refuses to smile. Picture Perfect solves this challenge using AI-powered capture. Instead of a single shot, every photo becomes a 5-second capture analyzing 150 micro-moments. The app then offers the best facial expressions for each person, letting you instantly “swap” faces so everyone looks their best. Importantly, these are not AI-generated fakes but real expressions captured during that moment. Once satisfied, you can download the polished photo directly to your library. It also works for selfies, making sure you always get your best shot. However, it’s designed for people, not pets, objects, or landscapes ensuring the focus remains on creating flawless human-centered photos.",
+    //   image:
+    //     "https://cdn-ejdof.nitrocdn.com/KAWXnbTgyTtrLyynvzyJINvTLQEBJgEd/assets/images/optimized/rev-32bedbf/tezeract.ai/wp-content/uploads/2024/10/Pictureperfect-process-image.png",
+    //   url: "https://play.google.com/store/apps/details?id=com.picper&hl=en",
+    //   maxWidth: 500,
+    // },
   ];
 
   return (
